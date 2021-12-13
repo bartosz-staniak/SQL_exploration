@@ -20,7 +20,8 @@ namespace SQL_ConsoleApp
                     {
                         while (reader.Read())
                         {
-                            Console.WriteLine(String.Format("{0}", reader[0]));
+                            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}", 
+                                reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]));
                         }
                     }
                 }
