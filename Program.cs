@@ -18,7 +18,10 @@ namespace SQL_ConsoleApp
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-
+                        while (reader.Read())
+                        {
+                            Console.WriteLine(String.Format("{0}", reader[0]));
+                        }
                     }
                 }
             }
