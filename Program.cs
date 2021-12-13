@@ -13,9 +13,9 @@ namespace SQL_ConsoleApp
             {
 
             }
-            catch
+            catch (Exception e)
             {
-
+                Console.WriteLine("Exception caught: " + e.Message);
             }
         }
     }
