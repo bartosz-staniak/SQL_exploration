@@ -8,6 +8,7 @@ namespace SQL_ConsoleApp
         static void Main(string[] args)
         {
             string connectionString = ConnStringClass.connString;
+            string queryString = "SELECT * FROM dbo.InitialModels";
 
             try
             {
