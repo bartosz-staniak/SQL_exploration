@@ -14,7 +14,7 @@ namespace SQL_ConsoleApp
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-
+                    SqlCommand command = new SqlCommand(queryString, connection);
                 }
             }
             catch (Exception e)
