@@ -11,7 +11,10 @@ namespace SQL_ConsoleApp
 
             try
             {
+                using (SqlConnection connection = new SqlConnection(connectionString)) // SqlConnection not found in the namespace 'System.Data.SqlClient'
+                {
 
+                }
             }
             catch (Exception e)
             {
