@@ -9,6 +9,8 @@ namespace SQL_ConsoleApp
         {
             string connectionString = ConnStringClass.connString;
             string queryString = "SELECT * FROM dbo.InitialModels";
+            string insertData = "INSERT [dbo].[InitialModels] ([id], [DateAndTime], [Location], [TemperatureC], [RainChance], [Summary], [SubmittedBy]) "
+                + "VALUES (1, 2020-11-11 11:11:11.0000000, testLocation, 11, 11, testSummary, testSubmitter)";
 
             try
             {
