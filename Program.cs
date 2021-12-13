@@ -16,6 +16,10 @@ namespace SQL_ConsoleApp
                 {
                     SqlCommand command = new SqlCommand(queryString, connection);
                     connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+
+                    }
                 }
             }
             catch (Exception e)
