@@ -5,9 +5,10 @@ namespace SQL_ConsoleApp
 {
     class Program
     {
+        string connectionString = ConnStringClass.connString;
+
         static void Main(string[] args)
         {
-            string connectionString = ConnStringClass.connString;
             string queryString = "SELECT * FROM dbo.InitialModels";
             
             try
