@@ -34,5 +34,10 @@ namespace SQL_ConsoleApp
                 Console.WriteLine("Exception caught: " + e.Message);
             }
         }
+
+        void insertQuery ()
+        {
+
+        }
     }
 }
