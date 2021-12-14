@@ -9,9 +9,7 @@ namespace SQL_ConsoleApp
         {
             string connectionString = ConnStringClass.connString;
             string queryString = "SELECT * FROM dbo.InitialModels";
-            string insertDataQuery = "INSERT [dbo].[InitialModels] ([id], [DateAndTime], [Location], [TemperatureC], [RainChance], [Summary], [SubmittedBy]) "
-                + "VALUES (1, 2020-11-11 11:11:11.0000000, testLocation, 11, 11, testSummary, testSubmitter)";
-
+            
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -37,7 +35,8 @@ namespace SQL_ConsoleApp
 
         void insertQuery ()
         {
-
+            string insertDataQuery = "INSERT [dbo].[InitialModels] ([id], [DateAndTime], [Location], [TemperatureC], [RainChance], [Summary], [SubmittedBy]) "
+                + "VALUES (1, 2020-11-11 11:11:11.0000000, testLocation, 11, 11, testSummary, testSubmitter)";
         }
     }
 }
