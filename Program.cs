@@ -44,7 +44,7 @@ namespace SQL_ConsoleApp
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     // SqlCommand insertCommand = new SqlCommand(insertData, connection);
-                    SqlCommand command = new SqlCommand(queryString, connection);
+                    SqlCommand command = new SqlCommand(insertDataQuery, connection);
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
