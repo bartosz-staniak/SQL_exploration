@@ -5,7 +5,7 @@ namespace SQL_ConsoleApp
 {
     class Program
     {
-        string connectionString = ConnStringClass.connString;
+        static string connectionString = ConnStringClass.connString;
 
         static void Main(string[] args)
         {
