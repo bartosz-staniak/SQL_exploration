@@ -43,17 +43,8 @@ namespace SQL_ConsoleApp
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    // SqlCommand insertCommand = new SqlCommand(insertData, connection);
                     SqlCommand command = new SqlCommand(insertDataQuery, connection);
                     connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}",
-                                reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]));
-                        }
-                    }
                 }
             }
             catch (Exception e)
