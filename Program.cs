@@ -28,6 +28,7 @@ namespace SQL_ConsoleApp
                         + "VALUES ('2020-11-11 11:11:11.0000000', 'testLocation', '11', '11', 'testSummary', 'testSubmitter')";
                     command.Connection = connection;
                     connection.Open();
+                    command.ExecuteNonQuery();
                 }
             }
             catch (Exception e)
