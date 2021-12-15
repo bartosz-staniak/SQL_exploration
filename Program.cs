@@ -9,8 +9,8 @@ namespace SQL_ConsoleApp
 
         static void Main(string[] args)
         {
-            insertQuery();
-            selectQuery();
+            insertQuery(); // does not work
+            selectQuery(); // works
         }
 
         static void insertQuery ()
