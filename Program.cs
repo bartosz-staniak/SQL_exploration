@@ -9,14 +9,12 @@ namespace SQL_ConsoleApp
 
         static void Main(string[] args)
         {
-            insertQuery(); // does not work
+            insertQuery(); // works
             selectQuery(); // works
         }
 
         static void insertQuery ()
         {
-            // string insertDataQuery = "INSERT WhateverDB.dbo.InitialModels ([DateAndTime], [Location], [TemperatureC], [RainChance], [Summary], [SubmittedBy])"
-                // + "VALUES ('2020-11-11 11:11:11.0000000', 'testLocation', '11', '11', 'testSummary', 'testSubmitter')"; // the query may not have worked due to IDENTITY_INSERT set to off
 
             try
             {
