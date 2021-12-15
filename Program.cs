@@ -9,31 +9,7 @@ namespace SQL_ConsoleApp
 
         static void Main(string[] args)
         {
-            string queryString = "SELECT * FROM dbo.InitialModels";
             
-            try
-            {
-                insertQuery();
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    // SqlCommand insertCommand = new SqlCommand(insertData, connection);
-                    SqlCommand command = new SqlCommand(queryString, connection);
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}", 
-                                reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]));
-                        }
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception caught: " + e.Message);
-            }
         }
 
         static void insertQuery ()
@@ -47,6 +23,35 @@ namespace SQL_ConsoleApp
                 {
                     SqlCommand command = new SqlCommand(insertDataQuery, connection);
                     connection.Open();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception caught: " + e.Message);
+            }
+        }
+
+        static void selectQuery()
+        {
+            string queryString = "SELECT * FROM dbo.InitialModels";
+
+            try
+            {
+                insertQuery();
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    // SqlCommand insertCommand = new SqlCommand(insertData, connection);
+                    SqlCommand command = new SqlCommand(queryString, connection);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}",
+                                reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]));
+                        }
+                    }
                 }
             }
             catch (Exception e)
