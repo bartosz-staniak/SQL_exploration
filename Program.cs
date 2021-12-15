@@ -29,6 +29,7 @@ namespace SQL_ConsoleApp
                     command.Connection = connection;
                     connection.Open();
                     command.ExecuteNonQuery();
+                    connection.Close();
                 }
             }
             catch (Exception e)
