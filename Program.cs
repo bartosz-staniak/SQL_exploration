@@ -13,6 +13,8 @@ namespace SQL_ConsoleApp
             
             try
             {
+                insertQuery();
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     // SqlCommand insertCommand = new SqlCommand(insertData, connection);
