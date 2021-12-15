@@ -22,7 +22,7 @@ namespace SQL_ConsoleApp
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand(insertDataQuery, connection);
+                    SqlCommand command = new SqlCommand();
                     command.CommandType = System.Data.CommandType.Text;
                     command.CommandText = "INSERT WhateverDB.dbo.InitialModels ([DateAndTime], [Location], [TemperatureC], [RainChance], [Summary], [SubmittedBy])"
                         + "VALUES ('2020-11-11 11:11:11.0000000', 'testLocation', '11', '11', 'testSummary', 'testSubmitter')";
