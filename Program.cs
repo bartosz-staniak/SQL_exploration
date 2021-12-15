@@ -26,6 +26,7 @@ namespace SQL_ConsoleApp
                     command.CommandType = System.Data.CommandType.Text;
                     command.CommandText = "INSERT WhateverDB.dbo.InitialModels ([DateAndTime], [Location], [TemperatureC], [RainChance], [Summary], [SubmittedBy])"
                         + "VALUES ('2020-11-11 11:11:11.0000000', 'testLocation', '11', '11', 'testSummary', 'testSubmitter')";
+                    command.Connection = connection;
                     connection.Open();
                 }
             }
