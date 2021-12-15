@@ -23,6 +23,7 @@ namespace SQL_ConsoleApp
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     SqlCommand command = new SqlCommand(insertDataQuery, connection);
+                    command.CommandType = System.Data.CommandType.Text;
                     connection.Open();
                 }
             }
