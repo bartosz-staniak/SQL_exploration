@@ -39,7 +39,7 @@ namespace SQL_ConsoleApp
         static void insertQuery ()
         {
             string insertDataQuery = "INSERT [dbo].[InitialModels] ([id], [DateAndTime], [Location], [TemperatureC], [RainChance], [Summary], [SubmittedBy]) "
-                + "VALUES (1, 2020-11-11 11:11:11.0000000, testLocation, 11, 11, testSummary, testSubmitter)";
+                + "VALUES (137, 2020-11-11 11:11:11.0000000, testLocation, 11, 11, testSummary, testSubmitter)";
 
             try
             {
