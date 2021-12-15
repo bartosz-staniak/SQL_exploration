@@ -9,6 +9,7 @@ namespace SQL_ConsoleApp
 
         static void Main(string[] args)
         {
+            insertQuery();
             selectQuery();
         }
 
